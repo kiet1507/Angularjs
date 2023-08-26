@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 6</title>
+    <script src="angular/angular.min.js"></script>
+    <script src="bt6.js"></script>
+    
+
+</head>
+<body>
+    <table border="0">
+        <tr><td>Enter first name:</td><td><input type="text" ng-model="customer.firstName"></td></tr>
+
+        <tr><td>Enter last name: </td><td><input type="text" ng-model="customer.lastName"></td></tr>
+
+        <tr><td>Enter id: </td><td><input type="text" ng-model="customer.id"></td></tr>
+
+        <tr><td>Enter phone: </td><td><input type="text" ng-model="customer.phone"></td></tr>
+
+    </table>
+    <br/>
+    <table border="0">
+        <tr><td>Name in Upper Case: </td><td>{{customer.fullName() | uppercase }}</td></tr>
+        <tr><td>Name in Lower Case: </td><td>{{customer.fullName() | lowercase}}</td></tr>
+        <tr><td>id: </td><td>{{customer.id|number }}</td></tr>
+        <tr><td>Phone:</td><td>
+            <ul>
+                <li ng-repeat="phone in customer.phone | filter: phone">
+                    {{ customer.phone|number  }}
+                </li>
+            </ul>
+        </td></tr>
+    </table>
+
+
+
+
+
+
+    <script src="bt6.js"></script>
+    <script src="angular/angular.min.js"></script>
+</body>
+</html>
