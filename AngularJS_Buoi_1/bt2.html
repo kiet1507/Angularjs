@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"  >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="MyController" >
+<table border="1" width="300" >
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr ng-repeat="i in data.students">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+    </tr>
+</table>
+<br>
+<table border="1" width="300" >
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+    </tr>
+    <tr ng-repeat="i in data.books">
+        <td>{{i.id}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.price}}</td>
+    </tr>
+</table>
+<br>
+<table border="1" width="300" >
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+    </tr>
+    <tr ng-repeat="i in data.films">
+        <td>{{i.id}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.price}}</td>
+    </tr>
+</table>
+
+<script src="angular/angular.min.js"></script>
+<script src="js/app2.js"></script>
+
+</body>
+</html>
