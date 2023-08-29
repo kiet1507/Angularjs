@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>a<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="" ng-init="data=[{name: 'aaa',city: 'hcm',joinDate: '2020-01-01'},
+                               {name: 'bbb',city: 'hanoi',joinDate: '2021-01-01'},
+                               {name: 'ddd',city: 'bentre',joinDate: '2021-02-01'},
+                               {name: 'eee',city: 'bentre',joinDate: '2021-03-01'}]">
+<h2>Employee</h2>
+Filter <input type="text">
+<br><br>
+<table border="1" width="300px">
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Join Date</th>
+    </tr>
+    <tr ng-repeat="i in data">
+        <td>{{i.name | lowercase }}</td>
+        <td>{{i.city | uppercase }}</td>
+        <td>{{i.joinDate | date:'longDate'}}</td>
+    </tr>
+
+</table>
+<script src="angular/angular.min.js"></script>
+</body>
+</html>
